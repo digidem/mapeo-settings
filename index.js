@@ -15,7 +15,7 @@ var METADATA_DEFAULTS = {
   dataset_id: 'mapeodata'
 }
 
-class Config {
+class Settings {
   constructor (userDataPath) {
     this.userDataPath = userDataPath
     this.cssPath = path.join(this.userDataPath, 'style.css')
@@ -66,4 +66,4 @@ function readFile (filepath) {
   }
 }
 
-module.exports = Config
+module.exports = Settings

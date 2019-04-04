@@ -1,22 +1,22 @@
-# @mapeo/config
+# @mapeo/settings
 
-Configuration manager for Mapeo.
+Settings manager for Mapeo.
 
 ```
-npm install @mapeo/config
+npm install @mapeo/settings
 ```
 
 ### Usage
 
 ```js
-var Config = require('@mapeo/config')
+var Settings = require('@mapeo/settings')
 
-var config = new Config(userDataPath)
-config.importSettings(settingsFile, function (err) {
+var settings = new Settings(userDataPath)
+settings.importSettings(settingsFile, function (err) {
   if (err) throw err
   console.log('Settings imported!')
-  var presets = config.getSettings('presets')
-  var icons = config.getSettings('icons')
+  var presets = settings.getSettings('presets')
+  var icons = settings.getSettings('icons')
   //etc..
 })
 ```

@@ -1,7 +1,7 @@
 {
-  "name": "@mapeo/config",
+  "name": "@mapeo/settings",
   "version": "1.0.0",
-  "description": "Configuration management for Mapeo",
+  "description": "Settings management for Mapeo",
   "main": "index.js",
   "scripts": {
     "test-build": "mkdirp build && cd node_modules/config-jungle && mapeo-settings build -l 'es' -o ../../build/settings-jungle.mapeosettings && cd ../..",
