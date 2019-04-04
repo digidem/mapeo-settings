@@ -4,7 +4,8 @@
   "description": "configuration management for mapeo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-build": "mkdirp build && cd node_modules/config-jungle && mapeo-settings build -l 'es' -o ../../build/settings-jungle.mapeosettings && cd ../..",
+    "test": "node test"
   },
   "keywords": [
     "mapeo",
@@ -16,5 +17,10 @@
     "tar-fs": "^1.16.3"
   },
   "author": "Karissa McKelvey <krmckelv@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "config-jungle": "github:digidem/presets-jungle",
+    "mapeo-settings-builder": "^2.6.0",
+    "tape": "^4.10.1"
+  }
 }

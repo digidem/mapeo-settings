@@ -13,11 +13,11 @@ var Config = require('@mapeo/config')
 
 var config = new Config(userDataPath)
 config.importSettings(settingsFile, function (err) {
-  if (err) throw err)
+  if (err) throw err
   console.log('Settings imported!')
-  config.getSettings('presets', function (err, presets) {
-    console.log('Got presets file')
-  })
+  var presets = config.getSettings('presets')
+  var icons = config.getSettings('icons')
+  //etc..
 })
 ```
 
