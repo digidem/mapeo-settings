@@ -17,7 +17,7 @@ var METADATA_DEFAULTS = {
 
 class Config {
   constructor (userDataPath) {
-    this.userDataPath = userDataPath || require('electron').app.getPath('userData')
+    this.userDataPath = userDataPath
     this.cssPath = path.join(this.userDataPath, 'style.css')
     this.iconsPath = path.join(this.userDataPath, 'icons.svg')
   }
