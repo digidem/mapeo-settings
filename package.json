@@ -9,9 +9,11 @@
   },
   "keywords": [
     "mapeo",
-    "config"
+    "config",
+    "configuration",
+    "settings"
   ],
-  "homepage": "https://github.com/digidem/mapeo-config",
+  "homepage": "https://github.com/digidem/mapeo-settings",
   "dependencies": {
     "pump": "^1.0.3",
     "tar-fs": "^1.16.3"
