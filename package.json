@@ -1,0 +1,20 @@
+{
+  "name": "@mapeo/config",
+  "version": "1.0.0",
+  "description": "configuration management for mapeo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mapeo",
+    "config"
+  ],
+  "homepage": "https://github.com/digidem/mapeo-config",
+  "dependencies": {
+    "pump": "^1.0.3",
+    "tar-fs": "^1.16.0"
+  },
+  "author": "Karissa McKelvey <krmckelv@gmail.com>",
+  "license": "MIT"
+}
