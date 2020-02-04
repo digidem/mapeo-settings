@@ -1,4 +1,5 @@
 var fs = require('fs')
+var mkdirp = require('mkdirp')
 var tar = require('tar-fs')
 var pump = require('pump')
 var path = require('path')
@@ -11,6 +12,7 @@ class Settings {
   constructor (userDataPath) {
     this.userDataPath = userDataPath
     this.defaultPath = path.join(userDataPath, 'presets', 'default')
+    mkdirp.sync(this.defaultPath)
     this.cssPath = path.join(this.defaultPath, 'style.css')
     this.iconsPath = path.join(this.defaultPath, 'icons.svg')
   }
@@ -41,7 +43,7 @@ class Settings {
   }
   importSettings (settingsFile, cb) {
     var source = fs.createReadStream(settingsFile)
-    var dest = tar.extract(this.userDataPath)
+    var dest = tar.extract(this.defaultPath)
     pump(source, dest, cb)
   }
 }
