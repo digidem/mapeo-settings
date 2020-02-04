@@ -21,6 +21,16 @@ settings.importSettings(settingsFile, function (err) {
 })
 ```
 
+### API
+
+## ```instance.getSettings(type)```
+
+One of 'css', 'icons', 'presets', 'imagery', or 'metadata'.
+
+## ```instance.getProjectKey()```
+
+Shorthand for getting the `projectKey` from the metadata.
+
 ### Creating a Mapeo Settings file
 
 See [Mapeo Settings Builder](https://github.com/digidem/mapeo-settings-builder)

@@ -3,14 +3,6 @@ var tar = require('tar-fs')
 var pump = require('pump')
 var path = require('path')
 
-var SETTINGS_FILES = [
-  'presets.json',
-  'style.css',
-  'imagery.json',
-  'icons.svg',
-  'metadata.json'
-]
-
 var METADATA_DEFAULTS = {
   dataset_id: 'mapeodata'
 }
@@ -18,8 +10,17 @@ var METADATA_DEFAULTS = {
 class Settings {
   constructor (userDataPath) {
     this.userDataPath = userDataPath
-    this.cssPath = path.join(this.userDataPath, 'style.css')
-    this.iconsPath = path.join(this.userDataPath, 'icons.svg')
+    this.defaultPath = path.join(userDataPath, 'presets', 'default')
+    this.cssPath = path.join(this.defaultPath, 'style.css')
+    this.iconsPath = path.join(this.defaultPath, 'icons.svg')
+  }
+
+  getEncryptionKey () {
+    const metadata = readJsonSync(
+      path.join(this.userDataPath, 'presets/default/metadata.json')
+    )
+    if (metadata) return metadata.projectKey
+    else return null
   }
 
   getSettings (type) {
@@ -40,11 +41,7 @@ class Settings {
   }
   importSettings (settingsFile, cb) {
     var source = fs.createReadStream(settingsFile)
-    var dest = tar.extract(this.userDataPath, {
-      ignore: function (name) {
-        return SETTINGS_FILES.indexOf(path.basename(name)) < 0
-      }
-    })
+    var dest = tar.extract(this.userDataPath)
     pump(source, dest, cb)
   }
 }
