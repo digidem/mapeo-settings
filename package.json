@@ -4,7 +4,7 @@
   "description": "Settings management for Mapeo",
   "main": "index.js",
   "scripts": {
-    "test-build": "mkdirp build && cd node_modules/config-jungle && mapeo-settings build -l 'es' -o ../../build/settings-jungle.mapeosettings && cd ../..",
+    "test-build": "mkdirp build && cd node_modules/mapeo-default-settings && ../.bin/mapeo-settings build -l 'es' -o ../../build/settings-jungle.mapeosettings && cd ../..",
     "test": "node test"
   },
   "keywords": [
@@ -22,7 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "config-jungle": "github:digidem/presets-jungle",
-    "mapeo-settings-builder": "^2.6.0",
+    "mapeo-default-settings": "^2.1.0",
     "tape": "^4.10.1"
   }
 }
