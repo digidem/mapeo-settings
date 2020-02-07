@@ -18,9 +18,9 @@ class Settings {
   }
 
   getEncryptionKey () {
-    const metadata = readJsonSync(
-      path.join(this.userDataPath, 'presets/default/metadata.json')
-    )
+    // A fallback exists if the projectKey is null
+    // TODO: move that fallback here instead?
+    const metadata = this.getSettings('metadata')
     if (metadata) return metadata.projectKey
     else return null
   }
@@ -35,12 +35,13 @@ class Settings {
       case 'imagery':
         return readJsonSync(path.join(this.userDataPath, type + '.json'))
       case 'metadata':
-        var data = readJsonSync(path.join(this.userDataPath, type + '.json'))
+        var data = readJsonSync(path.join(this.defaultPath, type + '.json'))
         return Object.assign(METADATA_DEFAULTS, data)
       default:
         return null
     }
   }
+
   importSettings (settingsFile, cb) {
     var source = fs.createReadStream(settingsFile)
     var dest = tar.extract(this.defaultPath)
