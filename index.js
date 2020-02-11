@@ -20,6 +20,7 @@ class Settings {
   getEncryptionKey () {
     // A fallback exists if the projectKey is null
     // TODO: move that fallback here instead?
+    // TODO: rename to getProjectKey?
     const metadata = this.getSettings('metadata')
     if (metadata) return metadata.projectKey
     else return null
@@ -32,6 +33,7 @@ class Settings {
       case 'icons':
         return readFile(this.iconsPath)
       case 'presets':
+        return readJsonSync(path.join(this.defaultPath, type + '.json'))
       case 'imagery':
         return readJsonSync(path.join(this.userDataPath, type + '.json'))
       case 'metadata':
