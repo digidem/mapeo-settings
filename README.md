@@ -2,6 +2,9 @@
 
 Settings manager for Mapeo.
 
+[![Build
+Status](https://travis-ci.org/digidem/mapeo-settings.svg?branch=master)](https://travis-ci.org/digidem/mapeo-settings)
+
 ```
 npm install @mapeo/settings
 ```
