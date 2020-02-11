@@ -30,7 +30,7 @@ settings.importSettings(settingsFile, function (err) {
 
 One of 'css', 'icons', 'presets', 'imagery', or 'metadata'.
 
-## ```instance.getProjectKey()```
+## ```instance.getEncryptionKey()```
 
 Shorthand for getting the `projectKey` from the metadata.
 
