@@ -1,6 +1,6 @@
 {
   "name": "@mapeo/settings",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Settings management for Mapeo",
   "main": "index.js",
   "scripts": {
