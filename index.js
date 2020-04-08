@@ -35,7 +35,7 @@ class Settings {
       case 'presets':
         return readJsonSync(path.join(this.defaultPath, type + '.json'))
       case 'imagery':
-        return readJsonSync(path.join(this.userDataPath, type + '.json'))
+        return readJsonSync(path.join(this.defaultPath, type + '.json'))
       case 'metadata':
         var data = readJsonSync(path.join(this.defaultPath, type + '.json'))
         return Object.assign(METADATA_DEFAULTS, data)
