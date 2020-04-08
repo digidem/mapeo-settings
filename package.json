@@ -22,7 +22,6 @@
   "author": "Karissa McKelvey <krmckelv@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "config-jungle": "github:digidem/presets-jungle",
     "mapeo-default-settings": "^2.1.0",
     "rimraf": "^3.0.2",
     "tape": "^4.10.1"
