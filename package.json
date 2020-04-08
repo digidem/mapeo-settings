@@ -15,6 +15,7 @@
   ],
   "homepage": "https://github.com/digidem/mapeo-settings",
   "dependencies": {
+    "mkdirp": "^1.0.4",
     "pump": "^1.0.3",
     "rimraf": "^3.0.2",
     "tar-fs": "^1.16.3"
