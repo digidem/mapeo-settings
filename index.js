@@ -38,7 +38,7 @@ class Settings {
         return readJsonSync(path.join(this.defaultPath, type + '.json'))
       case 'metadata':
         var data = readJsonSync(path.join(this.defaultPath, type + '.json'))
-        return Object.assign(METADATA_DEFAULTS, data)
+        return Object.assign({}, METADATA_DEFAULTS, data)
       case 'translations':
         return readJsonSync(path.join(this.defaultPath, type + '.json'))
       default:
