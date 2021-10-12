@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/digidem/mapeo-settings/compare/v2.1.1...v2.1.2) (2021-10-12)
+
+
+### Bug Fixes
+
+* remove stale fields when getting metadata ([#5](https://github.com/digidem/mapeo-settings/issues/5)) ([ce4c873](https://github.com/digidem/mapeo-settings/commit/ce4c873e5bb16a49d89e991e5c3683686b503889))
+
 ### [2.1.1](https://github.com/digidem/mapeo-settings/compare/v2.1.0...v2.1.1) (2020-04-08)
 
 
