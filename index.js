@@ -4,10 +4,6 @@ var tar = require('tar-fs')
 var pump = require('pump')
 var path = require('path')
 
-var METADATA_DEFAULTS = {
-  dataset_id: 'mapeodata'
-}
-
 class Settings {
   constructor (userDataPath) {
     this.userDataPath = userDataPath
@@ -38,7 +34,7 @@ class Settings {
         return readJsonSync(path.join(this.defaultPath, type + '.json'))
       case 'metadata':
         var data = readJsonSync(path.join(this.defaultPath, type + '.json'))
-        return Object.assign({}, METADATA_DEFAULTS, data)
+        return data
       case 'translations':
         return readJsonSync(path.join(this.defaultPath, type + '.json'))
       default:
