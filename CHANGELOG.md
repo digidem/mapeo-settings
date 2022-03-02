@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.3](https://github.com/digidem/mapeo-settings/compare/v2.1.2...v2.1.3) (2022-03-02)
+
+
+### Bug Fixes
+
+* do not set any default settings metadata ([#7](https://github.com/digidem/mapeo-settings/issues/7)) ([9a7f82a](https://github.com/digidem/mapeo-settings/commit/9a7f82a85340edd996419580a8d51b3e336678c7))
+
 ### [2.1.2](https://github.com/digidem/mapeo-settings/compare/v2.1.1...v2.1.2) (2021-10-12)
 
 
